@@ -1,4 +1,4 @@
-# perfect-c-store
+# smart-buildings
 
 netlify build command:
 ```

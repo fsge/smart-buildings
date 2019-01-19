@@ -17,8 +17,8 @@ exclude:
 contentful:
   spaces:
     - content:
-        space: ENV_C_STORE_CONTENTFUL_SPACE_ID
-        access_token: ENV_C_STORE_CONTENTFUL_ACCESS_TOKEN
+        space: ENV_SMART_BUILDINGS_CONTENTFUL_SPACE_ID
+        access_token: ENV_SMART_BUILDINGS_CONTENTFUL_ACCESS_TOKEN
         all_entries: true
         individual_entry_files: true
         client_options:
