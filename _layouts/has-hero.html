@@ -1,0 +1,43 @@
+{% assign contentful = site.data.contentful.spaces.content %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="{{ page.seo_description }}"/>
+    <meta name="ahrefs-site-verification" content="a45cb6893450d90af781316e568f6320bf95201d8106dbbc665318f11a67f0f2">
+    <meta property="og:title" content="Perfect C-Store">
+<meta property="og:description" content="Smart Buildings Made Easy">
+<meta property="og:image" content="https://fsgsmartbuildings.com/img/og-image.png">
+<meta property="og:image:secure_url" content="https://fsgsmartbuildings.com/img/og-image.png">
+<meta property="og:image:url" content="https://fsgsmartbuildings.com/img/og-image.png">
+
+<meta name="twitter:title" content="FSG Smart Buildings">
+<meta name="twitter:description" content="Smart Buildings Made Easy">
+<meta name="twitter:image" content="https://fsgsmartbuildings.com/img/og-image.png">
+<meta name="twitter:card" content="https://fsgsmartbuildings.com">
+
+    <link rel="stylesheet" href="https://use.typekit.net/bpt7dml.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="icon" href="/img/favicon.png?v=3">
+    
+   
+
+    <title>{{ page.title }} | {{ site.title }}</title>
+    
+  </head>
+
+  <body class="has-hero">
+    <div class="page-wrapper">
+      {% include header.html contentful=contentful page=page logo="white" %}
+      <main>
+        {% for section in page.page_sections %}
+          {% include section.html section=section %}
+        {% endfor %}
+      </main>
+      {% include footer.html contentful=contentful %}
+    </div>
+    
+     </body>
+</html>
