@@ -1,8 +1,8 @@
-title: FSG Energy
+title: FSG Smart Buildings
 email: team@theneverwoods.com
 description: ""
 baseurl: ""
-url: "https://fsgenergy.com"
+url: "https://fsgsmartbuildings.com"
 plugins: 
   - jekyll-minifier
 sass:
