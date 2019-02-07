@@ -197,3 +197,9 @@ display:none;
 .default header {
 background:#fff;
 }
+
+header nav .logo-wrapper img {
+       vertical-align: -webkit-baseline-middle;
+       display: inline-block;
+       margin-top: 10px;
+}
