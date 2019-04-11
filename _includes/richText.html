@@ -1,0 +1,33 @@
+{% for node in include.data.content %}
+  {% if node.nodeType == 'paragraph' %}
+    <p>{% include richText.html data=node %}</p>
+  {% elsif node.nodeType == 'hyperlink' %}
+    <a href="{{ node.data.uri }}" target="_blank">
+      {{ node.value }}
+      {% include richText.html data=node %}
+    </a>
+  {% elsif node.nodeType == 'text' %}
+    {% for mark in node.marks %}
+      {% if mark.type == 'italic' %}
+        <i>
+      {% elsif mark.type == 'bold' %}
+        <b>
+      {% elsif mark.type == 'underline' %}
+        <u>
+      {% endif %}      
+    {% endfor %}
+
+    {{ node.value }}
+    {% include richText.html data=node %}
+
+    {% for mark in node.marks %}
+      {% if mark.type == 'italic' %}
+        </i>
+      {% elsif mark.type == 'bold' %}
+        </b>
+      {% elsif mark.type == 'underline' %}
+        </u>
+      {% endif %}      
+    {% endfor %}
+  {% endif %}
+{% endfor %}

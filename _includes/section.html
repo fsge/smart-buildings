@@ -2,4 +2,6 @@
   {% include raw.html html=include.section.html %}
 {% elsif include.section.sys.content_type_id == 'css' %}
   {% include styles.html css=include.section.css %}
+{% elsif include.section.sys.content_type_id == 'wysiwyg' %}
+  {% include richText.html data=include.section.rich_text %}
 {% endif %}
